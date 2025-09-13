@@ -1,0 +1,50 @@
+/* *{
+    max-width: 1280px;
+    margin: 0 auto;
+} */
+.btns {
+
+
+  font-size: 15px;
+  /* padding: 10px 30px; */
+  /* margin: 15px; */
+  border: none;
+  /* border-radius: 12px; */
+  cursor: pointer;
+  color: white;
+  position: relative;
+  background: black;
+  z-index: 1;
+}
+
+.btns::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 12px;
+  background: linear-gradient(270deg, #FF0000, #7928ca, #F5B027, #C0C0C0);
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: borderMove 5s linear infinite;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hello:hover {
+  transform: scale(1.1)
+}
